@@ -1,6 +1,7 @@
 # tekati-monit-system-src
 This is a microservice I wrote to monitor the HTTP status code of a website, and if it's not a passing status code, to send a email through AWS SES alerting of a outage.
-I intended for it to be used to automate updating a statuspage.io site, but I'm sure others can find a use for it as well. 
+I intended for it to be used to automate updating a statuspage.io site, but I'm sure others can find a use for it as well.
+Currently, it only runs once, but if you have a good way to run this code once per 5 minutes, feel free to add it!
 
 # Setup
 Node and NPM is needed, as is your AWS shared credentials file. Assuming you have these setup and in the right place, you can run npm install inside the root of the code, and either run it with node, or build the docker container and deploy it to whatever. 
