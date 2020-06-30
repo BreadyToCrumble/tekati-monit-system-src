@@ -7,11 +7,11 @@ AWS.config.getCredentials(function(err) {
     console.log("Access Key:", AWS.config.credentials.accessKeyId);
 });
 
-https.get(process.env.moniturl, function(res) {
+https.get(process.env.moniturl, function(res) { // reads the enviorment url moniturl instead of hardcoding
     console.log("StatusCode: ", res.statusCode);
     if (res.statusCode == 200 || res.statusCode == 301 || res.statusCode == 302) {
         const params = require("./extras/UP.js")
-        var sendPromise = new AWS.SES({apiVersion: '2010-12-01', region: 'us-east-1'}).sendEmail(params).promise();
+        var sendPromise = new AWS.SES({apiVersion: '2010-12-01', region: 'us-east-1'}).sendEmail(params).promise(); //TODO: figure out SESV2 API
         sendPromise.then(
             function(data) {
                 console.log(data.MessageId);
@@ -21,7 +21,7 @@ https.get(process.env.moniturl, function(res) {
                 });
     } else {
         const params = require("./extras/DOWN.js")
-        var sendPromise = new AWS.SES({apiVersion: '2010-12-01', region: 'us-east-1'}).sendEmail(params).promise();
+        var sendPromise = new AWS.SES({apiVersion: '2010-12-01', region: 'us-east-1'}).sendEmail(params).promise(); //TODO: figure out SESV2 API
         sendPromise.then(
             function(data) {
                 console.log(data.MessageId);

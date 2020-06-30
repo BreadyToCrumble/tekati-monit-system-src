@@ -3,7 +3,7 @@ module.exports = {
       CcAddresses: [
       ],
       ToAddresses: [
-        'component+ea9c86f1-ecfc-4eac-97d9-fca2c3a46762@notifications.statuspage.io',
+        '',
       ]
     },
     Message: { /* required */
@@ -22,7 +22,7 @@ module.exports = {
         Data: 'DOWN'
        }
       },
-    Source: 'monit@tekati.cloud', /* required */
+    Source: '', /* required */
     ReplyToAddresses: [
     ],
   };
