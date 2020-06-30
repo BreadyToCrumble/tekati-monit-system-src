@@ -9,7 +9,7 @@ AWS.config.getCredentials(function(err) {
 
 https.get(process.env.moniturl, function(res) {
     console.log("StatusCode: ", res.statusCode);
-    if (res.statusCode == 200) {
+    if (res.statusCode == 200 || res.statusCode == 301 || res.statusCode == 302) {
         const params = require("./extras/UP.js")
         var sendPromise = new AWS.SES({apiVersion: '2010-12-01', region: 'us-east-1'}).sendEmail(params).promise();
         sendPromise.then(
