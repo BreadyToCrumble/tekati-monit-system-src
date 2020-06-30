@@ -3,7 +3,7 @@ module.exports = {
       CcAddresses: [
       ],
       ToAddresses: [
-        '',
+        process.env.receiveemail,
       ]
     },
     Message: { /* required */
@@ -22,7 +22,7 @@ module.exports = {
         Data: 'UP'
        }
       },
-    Source: '', /* required */
+    Source: process.env.senderemail, /* required */
     ReplyToAddresses: [
     ],
   };

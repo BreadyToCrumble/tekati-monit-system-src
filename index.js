@@ -1,3 +1,10 @@
+/* Written by HeeToTheHo.
+Environment variables that you need:
+moniturl: put in the site you want monitored
+recieveemail: the email address that will recieve the status email
+senderemail: the email address that will send the email.
+*/
+
 var AWS = require("aws-sdk");
 var https = require('https');
 
