@@ -8,5 +8,7 @@ When running, be sure to pass all the needed enviorment variables (see below.) N
 
 # Needed Environment Variables
 <b>moniturl</b>: put in the site you want monitored (ex: http://example.com)
+
 <b>recieveemail</b>: the email address that will recieve the status email (ex: user1@example.com)
+
 <b>senderemail</b>: the email address that will send the email. (ex: monitor@example.com)
